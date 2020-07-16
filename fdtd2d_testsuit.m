@@ -258,7 +258,7 @@ hfig=figure('Name','FDTD-2D demo','units','normalized','outerposition',[0 0 1 1]
 axis tight manual
 imgcnt=0; %image counter for filename
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MAIN LOOP %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-for n=1:1:4000 %nmax
+for n=1:1:nmax
     do_Maxwell(n);            
     do_Diffusion();
     time=time+dt;
@@ -306,16 +306,16 @@ for n=1:1:4000 %nmax
                 
         frame=getframe(hfig);                        
         
-        %write frames to files
-        im = frame2im(frame);
-        [imind,cm] = rgb2ind(im,256);
-        
-        
-        if n==1 || mod(n,250)==0
-            imgcnt = imgcnt+1;
-            fname=strcat('my',num2str(imgcnt),'.jpg');
-            imwrite(imind,cm,fname,'jpg');
-        end
+%         %write frames to files ?
+%         im = frame2im(frame);
+%         [imind,cm] = rgb2ind(im,256);
+%         
+%         
+%         if n==1 || mod(n,250)==0
+%             imgcnt = imgcnt+1;
+%             fname=strcat('my',num2str(imgcnt),'.jpg');
+%             imwrite(imind,cm,fname,'jpg');
+%         end
         
       
     end
