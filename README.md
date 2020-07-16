@@ -7,7 +7,7 @@ The demo illustrates the partial shielding of an aluminum target by previously a
 Note: All the optical, thermophysical and transport-properties are modeled as constants here.
 In general they do depend at least on the electron- and lattice-temperatures, the density and the degree of ionization.
 
-Dispersion is taken into account by means of the Drude-Lorentz model having a single Lorentz-pole.
+Dispersion is taken into account by means of the Drude-Lorentz model having a single Lorentz-pole using the Auxiliary-Differential-Equation (ADE) method.
 Reflected waves are absorbed at the boundaries of the simulation domain using Berenger's split field method.
 Both, the TMZ and the TEZ modes are solved simultaneously.
 A soft source distributes the excitation energy among all modes evenly.
